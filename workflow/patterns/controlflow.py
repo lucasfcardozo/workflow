@@ -507,3 +507,4 @@ class MySpecialThread(threading.Thread):
     def run(self):
         call = self.itemq.get()
         call()
+        self.itemq.task_done()
